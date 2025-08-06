@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.form-container { 
+    min-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* .form-title { 
+    position: relative; 
+}
+
+.form-title::before { 
+    content: "";
+    position: absolute;
+    background-color: var(--color-orange-300);
+    width: 0.45rem; 
+    height: 100%;
+    top: 0;
+    left: .5vw;
+} */
