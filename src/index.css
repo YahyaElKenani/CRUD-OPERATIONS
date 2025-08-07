@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@theme {
+  --color-secondTextColor: #444444;
+  --color-bgColor: #f2f2f2;
+}
+@layer components {
+  .btn {
+    @apply text-white bg-[#FEAF00] py-2.5 px-6 rounded-[5px] flex-center gap-3 cursor-pointer;
+  }
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+@utility flex-start {
+  @apply flex justify-start items-center;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
