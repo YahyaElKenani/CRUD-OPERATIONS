@@ -79,40 +79,54 @@ export default function Form({type}) {
                 </div> 
                 { 
                     type === 'SIGN_UP' && 
-                    <Input icon={<FaRegUserCircle className="text-2xl"/>} type={'text'} placeholder={'Enter your name'} 
-                    onChange={(e) => setNewAccount((prevState) => ({...prevState, name: e.target.value}))} label={'Username'} initialValue={''}/>
-                }
-                <Input icon={<MdOutlineEmail className="text-2xl"/>} type={'email'} placeholder={'Enter your email'}
-                onChange={(e) => setNewAccount((prevState) => ({...prevState, email: e.target.value}))} label={'Email'}
-                initialValue={type === 'SIGN_UP' ? '' : newAccount.email}
-                />
-                <Input icon={
-                    showPassword ? 
-                    <FaRegEyeSlash onClick={togglePassword} />
-                    :
-                    <FaRegEye onClick={togglePassword} />
-                }
-                    
-                type={showPassword ? 'text' : 'password'} placeholder={'Enter your password'} initialValue={type === 'SIGN_UP' ? '' : newAccount.password}
-                onChange={(e) => setNewAccount((prevState) => ({...prevState, password: e.target.value}))} label={'Password'}/>
-                {
-                    type === 'SIGN_UP' && 
-                    <Input icon={
+                    <> 
+                        <Input icon={<FaRegUserCircle className="text-2xl"/>} type={'text'} placeholder={'Enter your name'} 
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, name: e.target.value}))} label={'Username'}/>
+                        <Input icon={<MdOutlineEmail className="text-2xl"/>} type={'email'} placeholder={'Enter your email'}
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, email: e.target.value}))} label={'Email'}          
+                        />    
+                        <Input icon={
+                            showPassword ? 
+                            <FaRegEyeSlash onClick={togglePassword} />
+                            :
+                            <FaRegEye onClick={togglePassword} />
+                        }
+                            
+                        type={showPassword ? 'text' : 'password'} placeholder={'Enter your password'}
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, password: e.target.value}))} label={'Password'}/>   
+                        <Input icon={
                         showConfirmPassword ? 
                         <FaRegEyeSlash onClick={toggleConfirmPassword} />
                         :
                         <FaRegEye onClick={toggleConfirmPassword} />
                     }
                         
-                    type={showConfirmPassword ? 'text' : 'password'} placeholder={'Confirm your password'}
-                    onChange={(e) => setConfirmPassword(e.target.value)} label={'Confirm Password'} initialValue={''}/>
+                        type={showConfirmPassword ? 'text' : 'password'} placeholder={'Confirm your password'}
+                        onChange={(e) => setConfirmPassword(e.target.value)} label={'Confirm Password'}/>   
+                        <Input icon={<MdInsertPhoto />} type={'text'} placeholder={'Enter avatar URL'} 
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, avatar: e.target.value}))}
+                        label={'Add avatar'}
+                        /> 
+                    </>
                 }
+
                 { 
-                    type === 'SIGN_UP' &&
-                    <Input icon={<MdInsertPhoto />} type={'text'} placeholder={'Enter avatar URL'} 
-                    onChange={(e) => setNewAccount((prevState) => ({...prevState, avatar: e.target.value}))}
-                    label={'Add avatar'} initialValue={''}
-                    /> 
+                    type === 'LOG_IN' && 
+                    <> 
+                        <Input icon={<MdOutlineEmail className="text-2xl"/>} type={'email'} placeholder={'Enter your email'}
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, email: e.target.value}))} label={'Email'}
+                        value={newAccount.email}
+                        />
+                        <Input icon={
+                            showPassword ? 
+                            <FaRegEyeSlash onClick={togglePassword} />
+                            :
+                            <FaRegEye onClick={togglePassword} />
+                        }
+                            
+                        type={showPassword ? 'text' : 'password'} placeholder={'Enter your password'} value={newAccount.password }
+                        onChange={(e) => setNewAccount((prevState) => ({...prevState, password: e.target.value}))} label={'Password'}/>   
+                    </>
                 }
                 <button className="bg-orange-400 self-center w-full text-gray-50 text-lg h-10 rounded-lg hover:opacity-75 transition-all
                 duration-300 cursor-pointer">{type === 'SIGN_UP' ? 'SIGN UP' : 'LOG IN'}</button>
