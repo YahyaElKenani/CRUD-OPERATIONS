@@ -37,6 +37,7 @@ export default function Form({type}) {
                     const success = await signUp(newAccount); 
                     if (success === true) { 
                         showToast("SUCCESS", "Signed up successfully");
+                        // navigate('/homepage'); => osama
                     } else { 
                         showToast("ERROR", "Sign up failed");
                     }
@@ -45,6 +46,7 @@ export default function Form({type}) {
                 const isValid = await validateData({type: 'LOG_IN', name: '', email: newAccount.email, password: newAccount.password, confirmPassword: ''})
                 if (isValid) { 
                     showToast("SUCCESS", "logged in");
+                    // navigate('/homepage'); => osama
                 } else { 
                     showToast('ERROR', 'Error logging in');
                 }
@@ -114,7 +116,7 @@ export default function Form({type}) {
                 }
                 <button className="bg-orange-400 self-center w-full text-gray-50 text-lg h-10 rounded-lg hover:opacity-75 transition-all
                 duration-300 cursor-pointer">{type === 'SIGN_UP' ? 'SIGN UP' : 'LOG IN'}</button>
-            <p onClick={() => type === 'SIGN_UP' ? navigate('login') : navigate('/') }
+            <p onClick={() => type === 'SIGN_UP' ? navigate('/login') : navigate('/') }
             className="text-center underline text-orange-400 cursor-pointer hover:opacity-75">
                 {type === 'SIGN_UP' ? 'Already have an account? Log in here' : 'Doesnt have an account? Sign up here'}
                 </p>

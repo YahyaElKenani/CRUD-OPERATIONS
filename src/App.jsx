@@ -23,7 +23,7 @@ export default function App() {
           }
         >
           <Route
-            path="signup"
+            path="/"
             element={
               <AnimationPage>
                 <SignUp />
