@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import UsersProvider from "./Context/UsersProvider";
+import Home from "./Pages/Home";
 import Layout from "./Components/Layout";
 import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
@@ -24,6 +25,7 @@ export default function App() {
                 </AnimationPage>
               }
             />
+           
             <Route
               path="login"
               element={
@@ -57,6 +59,7 @@ export default function App() {
               }
             />
           </Route>
+          <Route path="/home" element={<Home/>}/>
         </Routes>
       </UsersProvider>
     </AnimatePresence>
