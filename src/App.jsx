@@ -9,7 +9,7 @@ import Users from "./Pages/Users";
 import CreateUsers from "./Pages/CreateUsers";
 import AnimationPage from "./Animation/AnimationPageRouting";
 import EditProduct from "./Components/EditProduct/EditPRODUCT";
-
+import './app.css'
 export default function App() {
   const location = useLocation();
   return (

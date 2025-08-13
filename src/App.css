@@ -9,17 +9,3 @@
     align-items: center;
     font-family: "Montserrat", sans-serif;
 }
-
-/* .form-title { 
-    position: relative; 
-}
-
-.form-title::before { 
-    content: "";
-    position: absolute;
-    background-color: var(--color-orange-300);
-    width: 0.45rem; 
-    height: 100%;
-    top: 0;
-    left: .5vw;
-} */
