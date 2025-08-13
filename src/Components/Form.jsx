@@ -37,7 +37,7 @@ export default function Form({type}) {
                     const success = await signUp(newAccount); 
                     if (success === true) { 
                         showToast("SUCCESS", "Signed up successfully");
-                        // navigate('/homepage'); => osama
+                         navigate('/home');
                     } else { 
                         showToast("ERROR", "Sign up failed");
                     }
@@ -46,7 +46,7 @@ export default function Form({type}) {
                 const isValid = await validateData({type: 'LOG_IN', name: '', email: newAccount.email, password: newAccount.password, confirmPassword: ''})
                 if (isValid) { 
                     showToast("SUCCESS", "logged in");
-                    // navigate('/homepage'); => osama
+                     navigate('/home'); 
                 } else { 
                     showToast('ERROR', 'Error logging in');
                 }
