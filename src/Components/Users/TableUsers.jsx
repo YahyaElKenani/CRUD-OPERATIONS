@@ -4,13 +4,15 @@ import { IoEyeSharp } from "react-icons/io5";
 import styles from "./Users.module.css";
 import { UsersContext } from "../../Context/UsersProvider";
 import UsersDetailsModel from "./UsersDetailsModel";
+import Navbar from "../Navbar";
 
 const TableUsers = () => {
   const { users } = useContext(UsersContext);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   return (
-    <div>
+    <div className="flex">
+      <Navbar />
       <table className={`${styles.userTable} mt-6 `}>
         <thead>
           <tr className="text-[#a09f9f]">

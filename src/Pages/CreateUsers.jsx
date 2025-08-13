@@ -122,7 +122,7 @@ const CreateUsers = () => {
           </div>
 
           <button type="submit" className="btn m-auto w-full py-3">
-            Cretae User
+            Create User
           </button>
           <Toaster position="top-center" reverseOrder={false} />
         </form>

@@ -27,7 +27,7 @@ export default function App() {
             />
            
             <Route
-              path=""
+              path="/login"
               element={
                 <AnimationPage>
                   <LogIn />
